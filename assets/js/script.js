@@ -1,32 +1,33 @@
-"use strict"
+"use strict";
 
-// alert("hello");
+const numberOfFilms = +prompt('Сколько фильмов вы посмотрели?', '');
+ 
+const personalMovieDB = {
+    count: {},
+    movies: {},
+    genres: [],
+    privat: false
+};
 
-// const result = confirm("ты тут?"); 
+for (let i = 0; i < 2; i++) {
+    const a = prompt('Какой последний просмотренный фильм?', ''),
+          b = prompt('Насколько оцените его?', '');
 
-// const answer = prompt("Тебе есть 18?", "19");
-
-/***{
-const userName = prompt("Как тебя зовут?");
-
-alert(`Привет, ${userName}`);
-}***/
-
-/***
-const  num = 50;
-switch (num) {
-    case 49:
-        console.log("Error");
-        break;
-    case 100:
-        console.log("Is not");
-        break;
-    case 50:
-        console.log("Oh yee");
-        break;
-    default:
-        console.log("It`s not number 50");
-        break;
+    if (a != null && b != null && a != '' && b != '' && a.length < 50) {
+        personalMovieDB.movies[a] = b;
+    } else {
+        i--;
+    }
 }
-***/
 
+if (personalMovieDB.count < 10) {
+    alert('Вы наверное больше книги любите!');
+} else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30) {
+    alert('Вы любите кино!');
+} else if (personalMovieDB.count >=30) {
+    alert('Вы киноман');
+} else {
+    alert('Что то непонятно');
+}
+
+console.log(personalMovieDB);
