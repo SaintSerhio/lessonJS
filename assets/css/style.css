@@ -1,0 +1,21 @@
+body {
+    background-color: #f3f3f3;
+}
+
+.logo__js {
+    margin: 40px 0px 0px 40px;
+    width: 90px;
+    height: 55px;
+    background-color: #c5bdbb;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.js__logo {
+    color: #f3420f;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+}
